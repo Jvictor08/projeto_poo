@@ -1,14 +1,16 @@
-import { Video, AdVideo, LiveStream } from './video.js';
-import { Playlist } from './playlist.js';
-import { Player } from './player.js';
+import { Video } from './models/classes/video.js';
+import { AdVideo } from './models/classes/advideo.js';
+import { LiveStream } from './models/classes/livestream.js';
+import { Playlist } from './models/classes/playlist.js';
+import { Player } from './models/classes/player.js';
 
 // Criando os vídeos
 const video1 = new Video('v1', 'A Aventura de Programar', 300, 'DevJedi');
-const adVideo1 = new AdVideo('ad1', 'Anúncio: Compre agora!', 15, 'ShopFast Inc.', 5);
+const adVideo1 = new AdVideo('ad1', 'Compre agora!', 15, 'ShopFast Inc.', 'Placa de Video RTX 5090', 5)
 const video2 = new Video('v2', 'Padrões de Projeto', 600, 'Arquiteto Codificador');
 const liveStream1 = new LiveStream('live1', 'Live: Construindo um App com React', 'LiveCoder', 1500);
 const video3 = new Video('v3', 'Tópicos de Algoritmos', 450, 'Professor Tech');
-const adVideo2 = new AdVideo('ad2', 'Anúncio: Novo Carro', 25, 'Auto Motors', 10);
+const adVideo2 = new AdVideo('ad2', 'Novo Carro!', 25, 'Auto Motors', 'Nova BMW 325i',5);
 
 // Criando a playlist e adicionando os vídeos
 const playlist = new Playlist();

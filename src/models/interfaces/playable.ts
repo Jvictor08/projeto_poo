@@ -3,7 +3,3 @@ export interface Playable {
   pause(): void;
   stop(): void;
 }
-
-export interface Describable {
-  info(): string;
-}

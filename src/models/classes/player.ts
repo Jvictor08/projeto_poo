@@ -1,5 +1,4 @@
 import { Playlist } from './playlist.js';
-import { Video } from './video.js';
 
 export class Player {
   private playlist: Playlist;
@@ -77,9 +76,9 @@ export class Player {
       // Simplificação: no modo shuffle, o previous pode voltar para o item anterior na lista,
       // mas não seguiria uma lógica de pilha (history).
       const currentVideo = this.playlist.getCurrent();
-      const lastPlayedIndex = this.shuffleOrder.find(index => this.playlist.getVideos()[index].getId() === currentVideo.getId());
+      const lastPlayedIndex = this.shuffleOrder.find(index => this.playlist.getVideos()[index]!.getId() === currentVideo!.getId());
       if (lastPlayedIndex !== undefined && lastPlayedIndex > 0) {
-        this.playlist.setCurrentIndex(this.shuffleOrder[lastPlayedIndex - 1]);
+        this.playlist.setCurrentIndex(this.shuffleOrder[lastPlayedIndex - 1]!);
         this.play();
       } else {
           console.log('Não é possível voltar no modo shuffle.');

@@ -16,7 +16,7 @@ export class Playlist {
     if (this.videos.length === 0) {
       return null;
     }
-    return this.videos[this.currentIndex];
+    return this.videos[this.currentIndex]!;
   }
 
   public hasNext(): boolean {

@@ -1,5 +1,4 @@
 import { Playlist } from './playlist.js';
-import { Video } from './video.js';
 export class Player {
     playlist;
     state = 'stopped';
